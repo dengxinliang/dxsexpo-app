@@ -70,6 +70,22 @@ const routes = [
                     active: 'about'
                 },
                 component: () => import('@/views/about')
+            },
+            {
+                path: 'news',
+                name: 'news',
+                meta: {
+                    title: '行业资讯'
+                },
+                component: () => import('@/views/news')
+            },
+            {
+                path: 'news-detail',
+                name: 'newsDetail',
+                meta: {
+                    title: '资讯详情'
+                },
+                component: () => import('@/views/news/detail')
             }
         ]
     }

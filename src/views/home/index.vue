@@ -6,14 +6,14 @@
             </van-swipe-item>
         </van-swipe>
         <div>
-            <Title title="关于我们" />
+            <Title title="关于我们" routerUrl="/about" />
             <div class="padlr10">
                 <img :src="baseUrl + exhibitionImg" alt="">
                 <div class="mart10" v-html="exhibitionInfo.des"></div>
             </div>
         </div>
         <div class="padbom20">
-            <Title title="行业资讯" />
+            <Title title="行业资讯" routerUrl="/news" />
             <div class="padlr10">
                 <van-list
                     v-model:loading="information.loading"
@@ -28,7 +28,7 @@
                             <div class="min-title ellipsis">{{item.title}}</div>
                             <p class="clamp-3" style="margin: 0;">{{initHtml(item.des)}}</p>
                             <p class="times">{{parseTime(new Date(item.create_date))}}
-                                <router-link to="/">查看详情
+                                <router-link :to="'/news-detail?id=' + item.id">查看详情
                                     <van-icon name="arrow" />
                                 </router-link>
                             </p>
@@ -62,7 +62,7 @@
             </div>
         </div>
         <div class="padbom20">
-            <Title title="参展流程" />
+            <Title title="参展流程" routerUrl="/exhibition-guide" />
             <div class="padlr10">
                 <van-steps :active="100" direction="vertical">
                     <van-step v-for="(item, index) in dxsIcons" :key="index">

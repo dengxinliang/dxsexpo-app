@@ -58,7 +58,7 @@ export default {
         margin: 6px 0;
         display: flex;
         .label{
-            width: 80px;
+            width: 90px;
             text-align: right;
         }
         .text{
