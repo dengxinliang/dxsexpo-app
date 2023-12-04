@@ -1,18 +1,21 @@
 <template>
-    <el-amap
+    <!-- <el-amap
       :center="mapCenter"
       :zoom="zoom"
     >
         <el-amap-marker :position="mapCenter"></el-amap-marker>
-    </el-amap>
+    </el-amap> -->
+    <div>
+        <img :src="require('@/assets/images/amap.png')" alt="">
+    </div>
 </template>
 
 <script>
 export default {
     data() {
         return {
-            mapCenter: [121.278576, 31.092369],
-            zoom: 16
+            // mapCenter: [121.278576, 31.092369],
+            // zoom: 16
         }
     }
 }

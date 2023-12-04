@@ -100,7 +100,7 @@ export default {
     },
     data() {
         return {
-            baseUrl: process.env.NODE_ENV === 'development' ? 'https://expoes.com.cn' : '',
+            baseUrl: '',
             banners: [],
             information: {
                 finished: false,

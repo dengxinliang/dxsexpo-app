@@ -29,7 +29,7 @@ export default {
     },
     data() {
         return {
-            baseUrl: process.env.NODE_ENV === 'development' ? 'https://expoes.com.cn' : '',
+            baseUrl: '',//process.env.NODE_ENV === 'development' ? 'https://expoes.com.cn' : '',
             rows: [],
             loading: false,
             finished: false,

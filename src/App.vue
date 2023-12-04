@@ -13,10 +13,24 @@ export default {
     }
   },
   created() {
-    this.devData()
+    this.init()
+    window.onresize = () => {
+        return (() => {
+          this.init()
+        })()
+    }
   },
   methods: {
     ...mapMutations(['getExhibitionInfo']),
+    init() {
+      let clientWidth = document.documentElement.clientWidth
+      let isPx = clientWidth > 1000
+      if(isPx) {
+        window.location.href = window.location.origin + '/dxsexpo-web/'
+        return
+      }
+      this.devData()
+    },
     async devData() {
       const params = {}
       const { code, data } = await company(params)
